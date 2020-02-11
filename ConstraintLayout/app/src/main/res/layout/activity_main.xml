@@ -6,13 +6,46 @@
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
 
-	<TextView
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline2"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Hello World!"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintRight_toRightOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		android:orientation="horizontal"
+		app:layout_constraintGuide_percent="0.5" />
 
+	<TextView
+		android:id="@+id/textView3"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="#9B2C2C"
+		app:layout_constraintBottom_toTopOf="@+id/guideline2"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHeight_default="percent"
+		app:layout_constraintWidth_default="percent" />
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="#20B126"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHeight_default="percent"
+		app:layout_constraintTop_toTopOf="@+id/guideline2"
+		app:layout_constraintWidth_default="percent" />
+
+	<Button
+		android:id="@+id/button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Merah"
+		tools:layout_editor_absoluteX="156dp"
+		tools:layout_editor_absoluteY="22dp" />
+
+	<Button
+		android:id="@+id/button2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Hijau"
+		tools:layout_editor_absoluteX="161dp"
+		tools:layout_editor_absoluteY="667dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
